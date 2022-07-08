@@ -1,0 +1,7 @@
+<launch>
+    <node name="razor_imu_test" pkg="razorcpp" type="razorcpp_node" output="screen">
+        <param name="port_name" value="/dev/ttyUSB0"/>
+        <param name="baudrate" value="115200"/>
+        <rosparam file="$(find razorcpp)/config/params.yaml" command="load"/>
+    </node>
+</launch>
